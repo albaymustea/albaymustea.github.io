@@ -207,25 +207,27 @@
         </section>
 
         <section id="pricing" class="page-section">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl font-extrabold text-gray-900">Size Uygun Planı Seçin</h2>
-                <p class="mt-4 text-lg text-gray-600">Risksiz başlayın, memnun kalırsanız devam edin.</p>
+    <div class="text-center mb-16">
+        <h2 class="text-4xl font-extrabold text-gray-900">Size Uygun Planı Seçin</h2>
+        <p class="mt-4 text-lg text-gray-600">Risksiz başlayın, memnun kalırsanız devam edin.</p>
+    </div>
+    <div class="max-w-5xl mx-auto grid lg:grid-cols-2 gap-8 items-center">
+        
+        <!-- Ücretsiz Deneme Kartı -->
+        <div class="bg-white rounded-2xl shadow-lg p-8 border">
+            <h3 class="text-2xl font-bold text-center text-gray-900">7 Günlük Ücretsiz Deneme</h3>
+            <div class="text-center my-8">
+                <span class="text-5xl font-extrabold text-gray-900">0 ₺</span>
             </div>
-            <div class="max-w-5xl mx-auto grid lg:grid-cols-2 gap-8 items-center">
-                
-                <div class="bg-white rounded-2xl shadow-lg p-8 border">
-                    <h3 class="text-2xl font-bold text-center text-gray-900">7 Günlük Ücretsiz Deneme</h3>
-                    <div class="text-center my-8">
-                        <span class="text-5xl font-extrabold text-gray-900">0 ₺</span>
-                    </div>
-                     <p class="text-center text-gray-500 mb-6">Tüm özellikleri 7 gün boyunca hiçbir ücret ödemeden ve kart bilgisi girmeden deneyin.</p>
-                    <ul class="space-y-4 text-gray-600">
-                        <li class="flex items-center"><svg class="w-6 h-6 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Tüm Modüllere Erişim</li>
-                        <li class="flex items-center"><svg class="w-6 h-6 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Sınırsız Ürün Ekleme</li>
-                        <li class="flex items-center"><svg class="w-6 h-6 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Teknik Destek</li>
-                    </ul>
-                    <a href="#" class="mt-10 block w-full text-center bg-gray-100 text-blue-600 font-bold text-lg px-6 py-4 rounded-lg border border-gray-300 hover:bg-gray-200 transition">Hemen Ücretsiz Başla</a>
-                </div>
+            <p class="text-center text-gray-500 mb-6">Tüm özellikleri 7 gün boyunca hiçbir ücret ödemeden ve kart bilgisi girmeden deneyin.</p>
+            <ul class="space-y-4 text-gray-600">
+                <li class="flex items-center"><svg class="w-6 h-6 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Tüm Modüllere Erişim</li>
+                <li class="flex items-center"><svg class="w-6 h-6 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Sınırsız Ürün Ekleme</li>
+                <li class="flex items-center"><svg class="w-6 h-6 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Teknik Destek</li>
+            </ul>
+            <!-- DEĞİŞİKLİK: 'a' etiketi yerine 'button' kullanıldı ve 'onclick' eklendi -->
+            <button onclick="openTrialModal()" class="mt-10 block w-full text-center bg-blue-600 text-white font-bold text-lg px-6 py-4 rounded-lg border border-blue-700 hover:bg-blue-700 transition cta-button">Hemen Ücretsiz Başla</button>
+        </div>
 
                 <div class="bg-white rounded-2xl shadow-xl border-4 border-blue-600 p-8 relative">
                     <span class="bg-blue-600 text-white text-xs font-bold px-3 py-1 rounded-full absolute -top-4 left-1/2 -translate-x-1/2">EN POPÜLER</span>
@@ -270,7 +272,6 @@
         // Sayfa geçişlerini yöneten fonksiyon
         const pages = document.querySelectorAll('.page-section');
         const navLinks = document.querySelectorAll('header nav a');
-
         function showPage(pageId) {
             window.scrollTo({ top: 0, behavior: 'smooth' });
             pages.forEach(page => { page.style.display = 'none'; });
@@ -289,7 +290,112 @@
         const mobileMenuButton = document.getElementById('mobile-menu-button');
         const mobileMenu = document.getElementById('mobile-menu');
         mobileMenuButton.addEventListener('click', () => { mobileMenu.classList.toggle('hidden'); });
-    </script>
+
+        <div id="trialModal" class="fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center p-4 z-50 hidden transition-opacity duration-300">
+    <div id="modalContent" class="bg-white w-full max-w-lg rounded-lg shadow-xl p-8 transform scale-95 transition-transform duration-300">
+        <div class="flex justify-between items-center mb-6">
+            <h2 class="text-2xl font-bold text-gray-800">Ücretsiz Deneme Formu</h2>
+            <button onclick="closeTrialModal()" class="text-gray-400 hover:text-gray-700 text-3xl leading-none">&times;</button>
+        </div>
+        <form id="trialForm">
+            <div class="space-y-5">
+                <div>
+                    <label for="fullName" class="block text-sm font-medium text-gray-700 mb-1">İsim Soyisim</label>
+                    <input type="text" id="fullName" name="fullName" required class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500">
+                </div>
+                <div>
+                    <label for="email" class="block text-sm font-medium text-gray-700 mb-1">E-posta Adresi</label>
+                    <input type="email" id="email" name="email" required class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500">
+                </div>
+                <div>
+                    <label for="phone" class="block text-sm font-medium text-gray-700 mb-1">Telefon Numarası</label>
+                    <!-- Telefon formatlaması için özel bir ID verildi -->
+                    <input type="tel" id="phone" name="phone" placeholder="+90" required class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500">
+                </div>
+            </div>
+            <div class="mt-8">
+                <button type="submit" id="submitButton" class="w-full bg-green-600 text-white font-bold py-3 px-4 rounded-lg cta-button hover:bg-green-700">
+                    Bilgileri Kaydet ve Uygulamayı İndir
+                </button>
+            </div>
+            <p id="formStatus" class="text-center mt-4 text-sm font-medium"></p>
+        </form>
+    </div>
+</div>
+
+<!-- 3. GEREKLİ JAVASCRIPT KODLARI -->
+<!-- Telefon formatlaması için imask.js kütüphanesi -->
+<script src="https://unpkg.com/imask"></script>
+
+<script>
+    // Modal elementlerini seç
+    const modal = document.getElementById('trialModal');
+    const modalContent = document.getElementById('modalContent');
+    const trialForm = document.getElementById('trialForm');
+    const submitButton = document.getElementById('submitButton');
+    const formStatus = document.getElementById('formStatus');
+
+    // Telefon numarası girişi için maskeyi uygula
+    const phoneInput = document.getElementById('phone');
+    const phoneMask = IMask(phoneInput, {
+        mask: '+{90} 000 000 00 00'
+    });
+
+    // Modal'ı açan fonksiyon
+    function openTrialModal() {
+        modal.classList.remove('hidden');
+        // Animasyon için küçük bir gecikme
+        setTimeout(() => {
+            modal.classList.remove('opacity-0');
+            modalContent.classList.remove('scale-95');
+        }, 10);
+    }
+
+    // Modal'ı kapatan fonksiyon
+    function closeTrialModal() {
+        modal.classList.add('opacity-0');
+        modalContent.classList.add('scale-95');
+        setTimeout(() => {
+            modal.classList.add('hidden');
+            trialForm.reset(); // Formu sıfırla
+            phoneMask.updateValue(); // Maskeyi de sıfırla
+            formStatus.textContent = ''; // Durum mesajını temizle
+            submitButton.disabled = false;
+            submitButton.innerHTML = 'Bilgileri Kaydet ve Uygulamayı İndir';
+        }, 300); // Animasyonun bitmesini bekle
+    }
+
+    // Form gönderildiğinde çalışacak fonksiyon
+    trialForm.addEventListener('submit', function(event) {
+        event.preventDefault(); // Formun sayfayı yenilemesini engelle
+
+        // Butonu devre dışı bırak ve durumu güncelle
+        submitButton.disabled = true;
+        submitButton.innerHTML = `
+            <svg class="animate-spin -ml-1 mr-3 h-5 w-5 text-white inline" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+            </svg>
+            İşleniyor...
+        `;
+        formStatus.textContent = 'Bilgileriniz kaydediliyor, lütfen bekleyin...';
+        formStatus.classList.remove('text-red-500', 'text-green-500');
+
+        // Bu kısma normalde verileri sunucuya gönderme kodu gelir.
+        // Şimdilik sadece başarılı mesajı gösterip indirmeyi başlatıyoruz.
+        setTimeout(() => {
+            formStatus.textContent = 'Başarılı! İndirme işlemi başlıyor...';
+            formStatus.classList.add('text-green-500');
+
+            // Ana dizindeki POSBIYIK.zip dosyasını indirmeyi başlat
+            window.location.href = 'POSBIYIK.zip';
+
+            // 5 saniye sonra modalı otomatik kapat
+            setTimeout(closeTrialModal, 5000);
+        }, 1500); // 1.5 saniyelik sahte bir bekleme süresi
+    });
+</script>
 
 </body>
+</imask.js>
 </html>
