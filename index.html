@@ -9,19 +9,18 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
-        /* Custom stil ve animasyonlar */
         body {
             font-family: 'Inter', sans-serif;
             scroll-behavior: smooth;
         }
         .hero-bg {
-            background-color: #111827; /* Koyu Gri */
+            background-color: #111827;
         }
         .nav-link {
             transition: color 0.3s;
         }
         .nav-link:hover {
-            color: #3b82f6; /* Mavi */
+            color: #3b82f6;
         }
         .cta-button {
             transition: all 0.3s;
@@ -30,12 +29,10 @@
             transform: translateY(-2px);
             box-shadow: 0 10px 15px -3px rgba(59, 130, 246, 0.3), 0 4px 6px -2px rgba(59, 130, 246, 0.2);
         }
-        /* Aktif sayfa linkini vurgulamak için */
         .active-link {
             color: #3b82f6;
             font-weight: 600;
         }
-         /* Sayfaların yumuşak geçişi için animasyon */
         .page-section {
             display: none;
             animation: fadeIn 0.5s ease-in-out;
@@ -48,7 +45,8 @@
 </head>
 <body class="bg-gray-50 text-gray-800">
 
-    <header class="bg-white/80 backdrop-blur-md sticky top-0 z-50 shadow-sm">
+    <!-- Header -->
+    <header class="bg-white/80 backdrop-blur-md sticky top-0 z-40 shadow-sm">
         <div class="container mx-auto px-6 py-4">
             <div class="flex items-center justify-between">
                 <div class="text-2xl font-bold text-gray-900">
@@ -74,36 +72,30 @@
                 <a href="#" onclick="showPage('features')" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-200 rounded">Özellikler</a>
                 <a href="#" onclick="showPage('pricing')" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-200 rounded">Fiyatlandırma</a>
                 <a href="#" onclick="showPage('support')" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-200 rounded">Destek</a>
-                 <a href="#" onclick="showPage('pricing')" class="block mt-4 text-center w-full bg-blue-600 text-white font-semibold px-5 py-2 rounded-lg shadow-md">Ücretsiz Dene</a>
+                <a href="#" onclick="showPage('pricing')" class="block mt-4 text-center w-full bg-blue-600 text-white font-semibold px-5 py-2 rounded-lg shadow-md">Ücretsiz Dene</a>
             </div>
         </div>
     </header>
 
+    <!-- Ana İçerik -->
     <main class="container mx-auto px-6 py-8 md:py-16">
 
+        <!-- Ana Sayfa Bölümü -->
         <section id="home" class="page-section">
             <div class="text-center hero-bg text-white py-20 px-6 rounded-2xl shadow-xl overflow-hidden">
                 <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mb-4">İşletmenizi Kolayca Yönetin, Kârınızı Artırın.</h1>
                 <p class="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto mb-8">POSBIYIK ile stok takibi, veresiye hesapları ve kasa yönetimi artık tek bir ekranda.</p>
                 <a href="#" onclick="showPage('pricing')" class="cta-button bg-blue-600 text-white font-bold text-lg px-8 py-4 rounded-lg inline-block shadow-lg">7 Gün Ücretsiz Dene</a>
                 <div class="mt-12 max-w-4xl mx-auto">
-                     <div class="relative overflow-hidden rounded-lg shadow-2xl ring-4 ring-white/10" style="padding-top: 56.25%;">
-                        <iframe 
-                            class="absolute top-0 left-0 w-full h-full"
-                            src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
-                            title="POSBIYIK Tanıtım Videosu" 
-                            frameborder="0" 
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                            allowfullscreen>
-                        </iframe>
+                    <div class="relative overflow-hidden rounded-lg shadow-2xl ring-4 ring-white/10" style="padding-top: 56.25%;">
+                        <iframe class="absolute top-0 left-0 w-full h-full" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="POSBIYIK Tanıtım Videosu" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                     </div>
                 </div>
             </div>
-
             <div class="py-24">
                 <div class="grid md:grid-cols-3 gap-12 text-center">
                     <div class="flex flex-col items-center">
-                         <div class="bg-blue-100 text-blue-600 p-4 rounded-full mb-4">
+                        <div class="bg-blue-100 text-blue-600 p-4 rounded-full mb-4">
                             <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
                         </div>
                         <h3 class="text-xl font-bold mb-2">Kolay Veresiye Yönetimi</h3>
@@ -117,7 +109,7 @@
                         <p class="text-gray-600">Ürünlerinizin giriş ve çıkışlarını anlık olarak izleyin, kritik stok seviyelerinde uyarı alın.</p>
                     </div>
                     <div class="flex flex-col items-center">
-                         <div class="bg-blue-100 text-blue-600 p-4 rounded-full mb-4">
+                        <div class="bg-blue-100 text-blue-600 p-4 rounded-full mb-4">
                             <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z"></path></svg>
                         </div>
                         <h3 class="text-xl font-bold mb-2">Merkezi Fiyat Güncelleme</h3>
@@ -125,7 +117,6 @@
                     </div>
                 </div>
             </div>
-
             <div class="bg-white py-20 px-10 rounded-2xl shadow-lg">
                 <h2 class="text-3xl font-bold text-center mb-4">POSBIYIK Kimler İçin İdeal?</h2>
                 <p class="text-center text-gray-600 max-w-2xl mx-auto mb-12">Stok takibi, hızlı satış ve veresiye yönetimine ihtiyaç duyan küçük ve orta ölçekli tüm perakende işletmeleri için tasarlandı.</p>
@@ -142,93 +133,79 @@
                         <div class="text-blue-600 mb-3"><svg class="w-12 h-12" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9.568 3H5.25A2.25 2.25 0 0 0 3 5.25v4.318c0 .597.237 1.17.659 1.591l9.581 9.581c.699.699 1.78.872 2.607.33a18.095 18.095 0 0 0 5.223-5.223c.542-.827.369-1.908-.33-2.607L11.16 3.66A2.25 2.25 0 0 0 9.568 3Z" /><path stroke-linecap="round" stroke-linejoin="round" d="M6 6h.008v.008H6V6Z" /></svg></div>
                         <h3 class="font-bold text-lg">Butik ve Giyim Mağazaları</h3>
                     </div>
-                     <div class="flex flex-col items-center">
+                    <div class="flex flex-col items-center">
                         <div class="text-blue-600 mb-3"><svg class="w-12 h-12" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A8.967 8.967 0 0 0 6 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 0 1 6 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 0 1 6-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0 0 18 18a8.967 8.967 0 0 0-6 2.292m0-14.25v14.25" /></svg></div>
                         <h3 class="font-bold text-lg">Kırtasiyeler</h3>
                     </div>
                 </div>
             </div>
-
-             <div class="text-center py-24">
+            <div class="text-center py-24">
                 <h2 class="text-4xl font-bold mb-4">İşletmenizi Dijitalleştirmeye Hazır mısınız?</h2>
                 <p class="text-lg text-gray-600 mb-8">POSBIYIK ile yönetimi basitleştirin ve büyümeye odaklanın.</p>
                 <a href="#" onclick="showPage('pricing')" class="cta-button bg-blue-600 text-white font-bold text-lg px-8 py-4 rounded-lg inline-block shadow-lg">Planları İncele ve Başla</a>
             </div>
         </section>
 
+        <!-- Özellikler Sayfası -->
         <section id="features" class="page-section">
             <div class="text-center mb-16">
                 <h2 class="text-4xl font-extrabold text-gray-900">POSBIYIK'ın Güçlü Özellikleri</h2>
                 <p class="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">İşletmenizin her ihtiyacını düşündük ve tüm modülleri tek bir pakette birleştirdik.</p>
             </div>
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-    <!-- Özellik Kartı: Hızlı Satış Ekranı -->
-    <div class="bg-white rounded-lg shadow-md p-6 flex flex-col">
-        <img src="images/satis_ekrani.png" alt="POSBIYIK Hızlı Satış Ekranı" class="rounded-md mb-4 border" onerror="this.onerror=null;this.src='https://placehold.co/600x400/e2e8f0/4a5568?text=Görsel+Yüklenemedi';">
-        <h3 class="text-xl font-bold mb-2">Hızlı Satış Ekranı</h3>
-        <p class="text-gray-600 flex-grow">Barkod okuyucu ve dokunmatik ekran uyumlu arayüzü ile satışlarınızı saniyeler içinde tamamlayın. Müşterilerinizi bekletmeyin.</p>
-    </div>
-
-    <!-- Özellik Kartı: Detaylı Ürün Yönetimi -->
-    <div class="bg-white rounded-lg shadow-md p-6 flex flex-col">
-        <img src="images/urunler.png" alt="POSBIYIK Ürün Yönetimi Penceresi" class="rounded-md mb-4 border" onerror="this.onerror=null;this.src='https://placehold.co/600x400/e2e8f0/4a5568?text=Görsel+Yüklenemedi';">
-        <h3 class="text-xl font-bold mb-2">Detaylı Ürün Yönetimi</h3>
-        <p class="text-gray-600 flex-grow">Ürünlerinizi kategori, marka, tedarikçi gibi detaylarla kaydedin. Stok giriş ve çıkışlarını kolayca yapın.</p>
-    </div>
-
-    <!-- Özellik Kartı: Günlük Kasa Hesabı -->
-    <div class="bg-white rounded-lg shadow-md p-6 flex flex-col">
-        <img src="images/kasa_hesabi.png" alt="POSBIYIK Günlük Kasa Hesabı Ekranı" class="rounded-md mb-4 border" onerror="this.onerror=null;this.src='https://placehold.co/600x400/e2e8f0/4a5568?text=Görsel+Yüklenemedi';">
-        <h3 class="text-xl font-bold mb-2">Günlük Kasa Hesabı</h3>
-        <p class="text-gray-600 flex-grow">Gün sonu kasanızı (nakit, kredi kartı, veresiye) otomatik olarak hesaplayın, kasa açıklarını anında tespit edin.</p>
-    </div>
-
-    <!-- Özellik Kartı: Personel Yönetimi -->
-    <div class="bg-white rounded-lg shadow-md p-6 flex flex-col">
-        <img src="images/personel.png" alt="POSBIYIK Personel Yönetim Ekranı" class="rounded-md mb-4 border" onerror="this.onerror=null;this.src='https://placehold.co/600x400/e2e8f0/4a5568?text=Görsel+Yüklenemedi';">
-        <h3 class="text-xl font-bold mb-2">Personel Yönetimi</h3>
-        <p class="text-gray-600 flex-grow">Personellerinize farklı yetkiler tanımlayın. Kimin hangi işlemi yaptığını takip ederek güvenliği artırın.</p>
-    </div>
-
-    <!-- Özellik Kartı: Gelişmiş Raporlar -->
-    <div class="bg-white rounded-lg shadow-md p-6 flex flex-col">
-        <img src="images/raporlar.png" alt="POSBIYIK Gelişmiş Raporlar Ekranı" class="rounded-md mb-4 border" onerror="this.onerror=null;this.src='https://placehold.co/600x400/e2e8f0/4a5568?text=Görsel+Yüklenemedi';">
-        <h3 class="text-xl font-bold mb-2">Gelişmiş Raporlar</h3>
-        <p class="text-gray-600 flex-grow">Satış, kâr-zarar, en çok satan ürünler gibi onlarca raporla işletmenizin performansını analiz edin.</p>
-    </div>
-
-    <!-- Özellik Kartı: Müşteri Yönetimi (Güncellendi) -->
-    <div class="bg-white rounded-lg shadow-md p-6 flex flex-col">
-        <img src="images/musteriler.png" alt="POSBIYIK Müşteri Yönetimi ve Veresiye Takibi" class="rounded-md mb-4 border" onerror="this.onerror=null;this.src='https://placehold.co/600x400/e2e8f0/4a5568?text=Görsel+Yüklenemedi';">
-        <h3 class="text-xl font-bold mb-2">Müşteri Yönetimi</h3>
-        <p class="text-gray-600 flex-grow">Müşterilerinizin veresiye hesaplarını, iletişim bilgilerini ve alışveriş geçmişini kolayca yönetin.</p>
-    </div>
-</div>
+                <div class="bg-white rounded-lg shadow-md p-6 flex flex-col">
+                    <img src="images/satis_ekrani.png" alt="POSBIYIK Hızlı Satış Ekranı" class="rounded-md mb-4 border" onerror="this.onerror=null;this.src='https://placehold.co/600x400/e2e8f0/4a5568?text=Görsel+Yüklenemedi';">
+                    <h3 class="text-xl font-bold mb-2">Hızlı Satış Ekranı</h3>
+                    <p class="text-gray-600 flex-grow">Barkod okuyucu ve dokunmatik ekran uyumlu arayüzü ile satışlarınızı saniyeler içinde tamamlayın.</p>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-6 flex flex-col">
+                    <img src="images/urunler.png" alt="POSBIYIK Ürün Yönetimi Penceresi" class="rounded-md mb-4 border" onerror="this.onerror=null;this.src='https://placehold.co/600x400/e2e8f0/4a5568?text=Görsel+Yüklenemedi';">
+                    <h3 class="text-xl font-bold mb-2">Detaylı Ürün Yönetimi</h3>
+                    <p class="text-gray-600 flex-grow">Ürünlerinizi kategori, marka, tedarikçi gibi detaylarla kaydedin. Stok giriş ve çıkışlarını kolayca yapın.</p>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-6 flex flex-col">
+                    <img src="images/kasa_hesabi.png" alt="POSBIYIK Günlük Kasa Hesabı Ekranı" class="rounded-md mb-4 border" onerror="this.onerror=null;this.src='https://placehold.co/600x400/e2e8f0/4a5568?text=Görsel+Yüklenemedi';">
+                    <h3 class="text-xl font-bold mb-2">Günlük Kasa Hesabı</h3>
+                    <p class="text-gray-600 flex-grow">Gün sonu kasanızı (nakit, kredi kartı, veresiye) otomatik olarak hesaplayın, kasa açıklarını anında tespit edin.</p>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-6 flex flex-col">
+                    <img src="images/personel.png" alt="POSBIYIK Personel Yönetim Ekranı" class="rounded-md mb-4 border" onerror="this.onerror=null;this.src='https://placehold.co/600x400/e2e8f0/4a5568?text=Görsel+Yüklenemedi';">
+                    <h3 class="text-xl font-bold mb-2">Personel Yönetimi</h3>
+                    <p class="text-gray-600 flex-grow">Personellerinize farklı yetkiler tanımlayın. Kimin hangi işlemi yaptığını takip ederek güvenliği artırın.</p>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-6 flex flex-col">
+                    <img src="images/raporlar.png" alt="POSBIYIK Gelişmiş Raporlar Ekranı" class="rounded-md mb-4 border" onerror="this.onerror=null;this.src='https://placehold.co/600x400/e2e8f0/4a5568?text=Görsel+Yüklenemedi';">
+                    <h3 class="text-xl font-bold mb-2">Gelişmiş Raporlar</h3>
+                    <p class="text-gray-600 flex-grow">Satış, kâr-zarar, en çok satan ürünler gibi onlarca raporla işletmenizin performansını analiz edin.</p>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-6 flex flex-col">
+                    <img src="images/musteriler.png" alt="POSBIYIK Müşteri Yönetimi ve Veresiye Takibi" class="rounded-md mb-4 border" onerror="this.onerror=null;this.src='https://placehold.co/600x400/e2e8f0/4a5568?text=Görsel+Yüklenemedi';">
+                    <h3 class="text-xl font-bold mb-2">Müşteri Yönetimi</h3>
+                    <p class="text-gray-600 flex-grow">Müşterilerinizin veresiye hesaplarını, iletişim bilgilerini ve alışveriş geçmişini kolayca yönetin.</p>
+                </div>
+            </div>
         </section>
 
+        <!-- Fiyatlandırma Sayfası -->
         <section id="pricing" class="page-section">
-    <div class="text-center mb-16">
-        <h2 class="text-4xl font-extrabold text-gray-900">Size Uygun Planı Seçin</h2>
-        <p class="mt-4 text-lg text-gray-600">Risksiz başlayın, memnun kalırsanız devam edin.</p>
-    </div>
-    <div class="max-w-5xl mx-auto grid lg:grid-cols-2 gap-8 items-center">
-        
-        <!-- Ücretsiz Deneme Kartı -->
-        <div class="bg-white rounded-2xl shadow-lg p-8 border">
-            <h3 class="text-2xl font-bold text-center text-gray-900">7 Günlük Ücretsiz Deneme</h3>
-            <div class="text-center my-8">
-                <span class="text-5xl font-extrabold text-gray-900">0 ₺</span>
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-extrabold text-gray-900">Size Uygun Planı Seçin</h2>
+                <p class="mt-4 text-lg text-gray-600">Risksiz başlayın, memnun kalırsanız devam edin.</p>
             </div>
-            <p class="text-center text-gray-500 mb-6">Tüm özellikleri 7 gün boyunca hiçbir ücret ödemeden ve kart bilgisi girmeden deneyin.</p>
-            <ul class="space-y-4 text-gray-600">
-                <li class="flex items-center"><svg class="w-6 h-6 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Tüm Modüllere Erişim</li>
-                <li class="flex items-center"><svg class="w-6 h-6 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Sınırsız Ürün Ekleme</li>
-                <li class="flex items-center"><svg class="w-6 h-6 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Teknik Destek</li>
-            </ul>
-            <!-- DEĞİŞİKLİK: 'a' etiketi yerine 'button' kullanıldı ve 'onclick' eklendi -->
-            <button onclick="openTrialModal()" class="mt-10 block w-full text-center bg-blue-600 text-white font-bold text-lg px-6 py-4 rounded-lg border border-blue-700 hover:bg-blue-700 transition cta-button">Hemen Ücretsiz Başla</button>
-        </div>
-
+            <div class="max-w-5xl mx-auto grid lg:grid-cols-2 gap-8 items-center">
+                <div class="bg-white rounded-2xl shadow-lg p-8 border">
+                    <h3 class="text-2xl font-bold text-center text-gray-900">7 Günlük Ücretsiz Deneme</h3>
+                    <div class="text-center my-8">
+                        <span class="text-5xl font-extrabold text-gray-900">0 ₺</span>
+                    </div>
+                    <p class="text-center text-gray-500 mb-6">Tüm özellikleri 7 gün boyunca hiçbir ücret ödemeden ve kart bilgisi girmeden deneyin.</p>
+                    <ul class="space-y-4 text-gray-600">
+                        <li class="flex items-center"><svg class="w-6 h-6 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Tüm Modüllere Erişim</li>
+                        <li class="flex items-center"><svg class="w-6 h-6 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Sınırsız Ürün Ekleme</li>
+                        <li class="flex items-center"><svg class="w-6 h-6 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Teknik Destek</li>
+                    </ul>
+                    <button onclick="openTrialModal()" class="mt-10 block w-full text-center bg-blue-600 text-white font-bold text-lg px-6 py-4 rounded-lg border border-blue-700 hover:bg-blue-700 transition cta-button">Hemen Ücretsiz Başla</button>
+                </div>
                 <div class="bg-white rounded-2xl shadow-xl border-4 border-blue-600 p-8 relative">
                     <span class="bg-blue-600 text-white text-xs font-bold px-3 py-1 rounded-full absolute -top-4 left-1/2 -translate-x-1/2">EN POPÜLER</span>
                     <h3 class="text-2xl font-bold text-center text-gray-900">POSBIYIK Yıllık Abonelik</h3>
@@ -236,31 +213,49 @@
                         <span class="text-5xl font-extrabold text-gray-900">2499₺</span>
                         <span class="text-xl text-gray-500 font-medium">/ Yıl</span>
                     </div>
-                     <p class="text-center text-gray-500 mb-6">Deneme sonrası memnun kalırsanız, tüm özelliklerden sınırsızca faydalanın.</p>
+                    <p class="text-center text-gray-500 mb-6">Deneme sonrası memnun kalırsanız, tüm özelliklerden sınırsızca faydalanın.</p>
                     <ul class="space-y-4 text-gray-600">
                         <li class="flex items-center"><svg class="w-6 h-6 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><b>Tüm Deneme Özellikleri ve Ek Olarak:</b></li>
                         <li class="flex items-center"><svg class="w-6 h-6 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Bulut Üzerinden Fiyat Güncellemeleri</li>
                         <li class="flex items-center"><svg class="w-6 h-6 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Otomatik Veri Yedekleme</li>
                         <li class="flex items-center"><svg class="w-6 h-6 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Tüm Yeni Sürüm ve Güncellemeler</li>
                     </ul>
-                    <a href="#" class="cta-button mt-10 block w-full text-center bg-blue-600 text-white font-bold text-lg px-6 py-4 rounded-lg shadow-lg">Satın Al</a>
+                    <a href="#" class="cta-button mt-10 block w-full text-center bg-gray-200 text-gray-500 font-bold text-lg px-6 py-4 rounded-lg shadow-lg cursor-not-allowed">Yakında...</a>
                 </div>
-
             </div>
         </section>
 
+        <!-- Destek Sayfası -->
         <section id="support" class="page-section">
             <div class="text-center mb-16">
                 <h2 class="text-4xl font-extrabold text-gray-900">Destek ve Yardım Merkezi</h2>
                 <p class="mt-4 text-lg text-gray-600">Aklınıza takılan bir soru mu var? Cevabı burada bulabilirsiniz.</p>
             </div>
             <div class="max-w-4xl mx-auto grid md:grid-cols-2 gap-12">
-                <div> <h3 class="text-2xl font-bold mb-6">Sıkça Sorulan Sorular</h3> <div class="space-y-4"> <details class="bg-white p-4 rounded-lg shadow-sm cursor-pointer"> <summary class="font-semibold">Program hangi işletim sistemlerinde çalışır?</summary> <p class="mt-2 text-gray-600">POSBIYIK, Windows 7, 8, 10 ve 11 işletim sistemlerinde sorunsuz bir şekilde çalışmaktadır.</p> </details> <details class="bg-white p-4 rounded-lg shadow-sm cursor-pointer"> <summary class="font-semibold">Kurulumu nasıl yaparım?</summary> <p class="mt-2 text-gray-600">Sitemizden indirdiğiniz kurulum dosyasını çalıştırıp birkaç basit adımla kurulumu tamamlayabilirsiniz.</p> </details> <details class="bg-white p-4 rounded-lg shadow-sm cursor-pointer"> <summary class="font-semibold">İnternetim kesilirse program çalışır mı?</summary> <p class="mt-2 text-gray-600">Evet, program internet bağlantısı olmadan da çalışmaya devam eder. İnternetiniz geldiğinde verileriniz otomatik olarak bulut ile senkronize edilir.</p> </details> <details class="bg-white p-4 rounded-lg shadow-sm cursor-pointer"> <summary class="font-semibold">Ücretsiz deneme sonrası ne olur?</summary> <p class="mt-2 text-gray-600">7 günlük deneme süreniz bittiğinde program kullanıma kısıtlanır. Verileriniz silinmez. Yıllık aboneliğe geçerek programı kaldığınız yerden kullanmaya devam edebilirsiniz.</p> </details> </div> </div> <div class="space-y-8"> <div> <h3 class="text-2xl font-bold mb-4">Kullanım Kılavuzu</h3> <div class="bg-white p-6 rounded-lg shadow-sm"> <p class="text-gray-600 mb-4">Programın tüm özelliklerini detaylı olarak anlatan kullanım kılavuzumuzu indirerek POSBIYIK'ı daha verimli kullanabilirsiniz.</p> <a href="#" class="inline-block bg-blue-600 text-white font-semibold px-5 py-2 rounded-lg hover:bg-blue-700 transition">Kılavuzu İndir (PDF)</a> </div> </div> <div> <h3 class="text-2xl font-bold mb-4">Bize Ulaşın</h3> <div class="bg-white p-6 rounded-lg shadow-sm"> <p class="text-gray-600 mb-4">Teknik destek veya diğer tüm sorularınız için bizimle iletişime geçmekten çekinmeyin.</p> <p class="font-semibold">E-posta: <a href="mailto:destek@posbiyik.com" class="text-blue-600">destek@posbiyik.com</a></p> <p class="font-semibold mt-2">Telefon: <span class="text-blue-600">0850 123 45 67</span></p> </div> </div> </div>
+                <div>
+                    <h3 class="text-2xl font-bold mb-6">Sıkça Sorulan Sorular</h3>
+                    <div class="space-y-4">
+                        <details class="bg-white p-4 rounded-lg shadow-sm cursor-pointer"><summary class="font-semibold">Program hangi işletim sistemlerinde çalışır?</summary><p class="mt-2 text-gray-600">POSBIYIK, Windows 7, 8, 10 ve 11 işletim sistemlerinde sorunsuz bir şekilde çalışmaktadır.</p></details>
+                        <details class="bg-white p-4 rounded-lg shadow-sm cursor-pointer"><summary class="font-semibold">Kurulumu nasıl yaparım?</summary><p class="mt-2 text-gray-600">Sitemizden indirdiğiniz kurulum dosyasını çalıştırıp birkaç basit adımla kurulumu tamamlayabilirsiniz.</p></details>
+                        <details class="bg-white p-4 rounded-lg shadow-sm cursor-pointer"><summary class="font-semibold">İnternetim kesilirse program çalışır mı?</summary><p class="mt-2 text-gray-600">Evet, program internet bağlantısı olmadan da çalışmaya devam eder. İnternetiniz geldiğinde verileriniz otomatik olarak bulut ile senkronize edilir.</p></details>
+                        <details class="bg-white p-4 rounded-lg shadow-sm cursor-pointer"><summary class="font-semibold">Ücretsiz deneme sonrası ne olur?</summary><p class="mt-2 text-gray-600">7 günlük deneme süreniz bittiğinde program kullanıma kısıtlanır. Verileriniz silinmez. Yıllık aboneliğe geçerek programı kaldığınız yerden kullanmaya devam edebilirsiniz.</p></details>
+                    </div>
+                </div>
+                <div class="space-y-8">
+                    <div>
+                        <h3 class="text-2xl font-bold mb-4">Kullanım Kılavuzu</h3>
+                        <div class="bg-white p-6 rounded-lg shadow-sm"><p class="text-gray-600 mb-4">Programın tüm özelliklerini detaylı olarak anlatan kullanım kılavuzumuzu indirerek POSBIYIK'ı daha verimli kullanabilirsiniz.</p><a href="#" class="inline-block bg-blue-600 text-white font-semibold px-5 py-2 rounded-lg hover:bg-blue-700 transition">Kılavuzu İndir (PDF)</a></div>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-bold mb-4">Bize Ulaşın</h3>
+                        <div class="bg-white p-6 rounded-lg shadow-sm"><p class="text-gray-600 mb-4">Teknik destek veya diğer tüm sorularınız için bizimle iletişime geçmekten çekinmeyin.</p><p class="font-semibold">E-posta: <a href="mailto:destek@posbiyik.com" class="text-blue-600">destek@posbiyik.com</a></p><p class="font-semibold mt-2">Telefon: <span class="text-blue-600">0850 123 45 67</span></p></div>
+                    </div>
+                </div>
             </div>
         </section>
-
     </main>
 
+    <!-- Footer -->
     <footer class="bg-gray-800 text-white">
         <div class="container mx-auto px-6 py-8 text-center">
             <p>&copy; 2025 POSBIYIK. Tüm Hakları Saklıdır.</p>
@@ -268,134 +263,125 @@
         </div>
     </footer>
 
+    <!-- DÜZELTİLMİŞ KISIM: Modal HTML kodu, script'lerin dışında, body içinde olmalı -->
+    <div id="trialModal" class="fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center p-4 z-50 hidden opacity-0 transition-opacity duration-300">
+        <div id="modalContent" class="bg-white w-full max-w-lg rounded-lg shadow-xl p-8 transform scale-95 transition-transform duration-300">
+            <div class="flex justify-between items-center mb-6">
+                <h2 class="text-2xl font-bold text-gray-800">Ücretsiz Deneme Formu</h2>
+                <button onclick="closeTrialModal()" class="text-gray-400 hover:text-gray-700 text-3xl leading-none">&times;</button>
+            </div>
+            <form id="trialForm">
+                <div class="space-y-5">
+                    <div>
+                        <label for="fullName" class="block text-sm font-medium text-gray-700 mb-1">İsim Soyisim</label>
+                        <input type="text" id="fullName" name="fullName" required class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500">
+                    </div>
+                    <div>
+                        <label for="email" class="block text-sm font-medium text-gray-700 mb-1">E-posta Adresi</label>
+                        <input type="email" id="email" name="email" required class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500">
+                    </div>
+                    <div>
+                        <label for="phone" class="block text-sm font-medium text-gray-700 mb-1">Telefon Numarası</label>
+                        <input type="tel" id="phone" name="phone" placeholder="+90" required class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500">
+                    </div>
+                </div>
+                <div class="mt-8">
+                    <button type="submit" id="submitButton" class="w-full bg-green-600 text-white font-bold py-3 px-4 rounded-lg cta-button hover:bg-green-700">
+                        Bilgileri Kaydet ve Uygulamayı İndir
+                    </button>
+                </div>
+                <p id="formStatus" class="text-center mt-4 text-sm font-medium"></p>
+            </form>
+        </div>
+    </div>
+
+    <!-- DÜZELTİLMİŞ KISIM: Tüm script'ler en sonda ve doğru sırada olmalı -->
+    <script src="https://unpkg.com/imask"></script>
     <script>
-        // Sayfa geçişlerini yöneten fonksiyon
+        // --- BÖLÜM 1: Sayfa Navigasyon ve Mobil Menü ---
         const pages = document.querySelectorAll('.page-section');
         const navLinks = document.querySelectorAll('header nav a');
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
         function showPage(pageId) {
             window.scrollTo({ top: 0, behavior: 'smooth' });
             pages.forEach(page => { page.style.display = 'none'; });
             const activePage = document.getElementById(pageId);
             if (activePage) { activePage.style.display = 'block'; }
+            
             navLinks.forEach(link => {
                 link.classList.remove('active-link');
-                if (link.id === `nav-${pageId}`) { link.classList.add('active-link'); }
+                if (link.id === `nav-${pageId}`) {
+                    link.classList.add('active-link');
+                }
             });
-            const mobileMenu = document.getElementById('mobile-menu');
             mobileMenu.classList.add('hidden');
         }
 
-        document.addEventListener('DOMContentLoaded', () => { showPage('home'); });
-        
-        const mobileMenuButton = document.getElementById('mobile-menu-button');
-        const mobileMenu = document.getElementById('mobile-menu');
-        mobileMenuButton.addEventListener('click', () => { mobileMenu.classList.toggle('hidden'); });
+        document.addEventListener('DOMContentLoaded', () => {
+            showPage('home');
+        });
 
-        <div id="trialModal" class="fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center p-4 z-50 hidden transition-opacity duration-300">
-    <div id="modalContent" class="bg-white w-full max-w-lg rounded-lg shadow-xl p-8 transform scale-95 transition-transform duration-300">
-        <div class="flex justify-between items-center mb-6">
-            <h2 class="text-2xl font-bold text-gray-800">Ücretsiz Deneme Formu</h2>
-            <button onclick="closeTrialModal()" class="text-gray-400 hover:text-gray-700 text-3xl leading-none">&times;</button>
-        </div>
-        <form id="trialForm">
-            <div class="space-y-5">
-                <div>
-                    <label for="fullName" class="block text-sm font-medium text-gray-700 mb-1">İsim Soyisim</label>
-                    <input type="text" id="fullName" name="fullName" required class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500">
-                </div>
-                <div>
-                    <label for="email" class="block text-sm font-medium text-gray-700 mb-1">E-posta Adresi</label>
-                    <input type="email" id="email" name="email" required class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500">
-                </div>
-                <div>
-                    <label for="phone" class="block text-sm font-medium text-gray-700 mb-1">Telefon Numarası</label>
-                    <!-- Telefon formatlaması için özel bir ID verildi -->
-                    <input type="tel" id="phone" name="phone" placeholder="+90" required class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500">
-                </div>
-            </div>
-            <div class="mt-8">
-                <button type="submit" id="submitButton" class="w-full bg-green-600 text-white font-bold py-3 px-4 rounded-lg cta-button hover:bg-green-700">
-                    Bilgileri Kaydet ve Uygulamayı İndir
-                </button>
-            </div>
-            <p id="formStatus" class="text-center mt-4 text-sm font-medium"></p>
-        </form>
-    </div>
-</div>
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
 
-<!-- 3. GEREKLİ JAVASCRIPT KODLARI -->
-<!-- Telefon formatlaması için imask.js kütüphanesi -->
-<script src="https://unpkg.com/imask"></script>
+        // --- BÖLÜM 2: Modal Form İşlevselliği ---
+        const modal = document.getElementById('trialModal');
+        const modalContent = document.getElementById('modalContent');
+        const trialForm = document.getElementById('trialForm');
+        const submitButton = document.getElementById('submitButton');
+        const formStatus = document.getElementById('formStatus');
 
-<script>
-    // Modal elementlerini seç
-    const modal = document.getElementById('trialModal');
-    const modalContent = document.getElementById('modalContent');
-    const trialForm = document.getElementById('trialForm');
-    const submitButton = document.getElementById('submitButton');
-    const formStatus = document.getElementById('formStatus');
+        if (modal) { // Elementlerin varlığını kontrol etmek iyi bir pratiktir
+            const phoneInput = document.getElementById('phone');
+            const phoneMask = IMask(phoneInput, {
+                mask: '+{90} 000 000 00 00'
+            });
 
-    // Telefon numarası girişi için maskeyi uygula
-    const phoneInput = document.getElementById('phone');
-    const phoneMask = IMask(phoneInput, {
-        mask: '+{90} 000 000 00 00'
-    });
+            window.openTrialModal = function() { // Fonksiyonu global kapsama taşı
+                modal.classList.remove('hidden');
+                setTimeout(() => {
+                    modal.classList.remove('opacity-0');
+                    modalContent.classList.remove('scale-95');
+                }, 10);
+            }
 
-    // Modal'ı açan fonksiyon
-    function openTrialModal() {
-        modal.classList.remove('hidden');
-        // Animasyon için küçük bir gecikme
-        setTimeout(() => {
-            modal.classList.remove('opacity-0');
-            modalContent.classList.remove('scale-95');
-        }, 10);
-    }
+            window.closeTrialModal = function() { // Fonksiyonu global kapsama taşı
+                modal.classList.add('opacity-0');
+                modalContent.classList.add('scale-95');
+                setTimeout(() => {
+                    modal.classList.add('hidden');
+                    trialForm.reset();
+                    phoneMask.updateValue();
+                    formStatus.textContent = '';
+                    submitButton.disabled = false;
+                    submitButton.innerHTML = 'Bilgileri Kaydet ve Uygulamayı İndir';
+                }, 300);
+            }
 
-    // Modal'ı kapatan fonksiyon
-    function closeTrialModal() {
-        modal.classList.add('opacity-0');
-        modalContent.classList.add('scale-95');
-        setTimeout(() => {
-            modal.classList.add('hidden');
-            trialForm.reset(); // Formu sıfırla
-            phoneMask.updateValue(); // Maskeyi de sıfırla
-            formStatus.textContent = ''; // Durum mesajını temizle
-            submitButton.disabled = false;
-            submitButton.innerHTML = 'Bilgileri Kaydet ve Uygulamayı İndir';
-        }, 300); // Animasyonun bitmesini bekle
-    }
+            trialForm.addEventListener('submit', function(event) {
+                event.preventDefault();
+                submitButton.disabled = true;
+                submitButton.innerHTML = `
+                    <svg class="animate-spin -ml-1 mr-3 h-5 w-5 text-white inline" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                        <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                        <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                    </svg>
+                    İşleniyor...
+                `;
+                formStatus.textContent = 'Bilgileriniz kaydediliyor, lütfen bekleyin...';
+                formStatus.classList.remove('text-red-500', 'text-green-500');
 
-    // Form gönderildiğinde çalışacak fonksiyon
-    trialForm.addEventListener('submit', function(event) {
-        event.preventDefault(); // Formun sayfayı yenilemesini engelle
-
-        // Butonu devre dışı bırak ve durumu güncelle
-        submitButton.disabled = true;
-        submitButton.innerHTML = `
-            <svg class="animate-spin -ml-1 mr-3 h-5 w-5 text-white inline" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
-                <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
-            </svg>
-            İşleniyor...
-        `;
-        formStatus.textContent = 'Bilgileriniz kaydediliyor, lütfen bekleyin...';
-        formStatus.classList.remove('text-red-500', 'text-green-500');
-
-        // Bu kısma normalde verileri sunucuya gönderme kodu gelir.
-        // Şimdilik sadece başarılı mesajı gösterip indirmeyi başlatıyoruz.
-        setTimeout(() => {
-            formStatus.textContent = 'Başarılı! İndirme işlemi başlıyor...';
-            formStatus.classList.add('text-green-500');
-
-            // Ana dizindeki POSBIYIK.zip dosyasını indirmeyi başlat
-            window.location.href = 'POSBIYIK.zip';
-
-            // 5 saniye sonra modalı otomatik kapat
-            setTimeout(closeTrialModal, 5000);
-        }, 1500); // 1.5 saniyelik sahte bir bekleme süresi
-    });
-</script>
-
+                setTimeout(() => {
+                    formStatus.textContent = 'Başarılı! İndirme işlemi başlıyor...';
+                    formStatus.classList.add('text-green-500');
+                    window.location.href = 'POSBIYIK.zip';
+                    setTimeout(closeTrialModal, 5000);
+                }, 1500);
+            });
+        }
+    </script>
 </body>
-</imask>
 </html>
