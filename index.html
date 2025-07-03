@@ -59,7 +59,7 @@
                     <a href="#" id="nav-support" onclick="showPage('support')" class="nav-link text-gray-600 font-medium">Destek</a>
                 </nav>
                 <div class="hidden md:block">
-                    <a href="#" onclick="showPage('pricing')" class="cta-button bg-blue-600 text-white font-semibold px-5 py-2 rounded-lg shadow-md">Ücretsiz Dene</a>
+                    <button onclick="openTrialModal()" class="cta-button bg-blue-600 text-white font-semibold px-5 py-2 rounded-lg shadow-md">Ücretsiz Dene</button>
                 </div>
                 <div class="md:hidden">
                     <button id="mobile-menu-button" class="text-gray-800 focus:outline-none">
@@ -68,11 +68,11 @@
                 </div>
             </div>
             <div id="mobile-menu" class="hidden md:hidden mt-4">
-                <a href="#" onclick="showPage('home')" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-200 rounded">Ana Sayfa</a>
-                <a href="#" onclick="showPage('features')" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-200 rounded">Özellikler</a>
-                <a href="#" onclick="showPage('pricing')" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-200 rounded">Fiyatlandırma</a>
-                <a href="#" onclick="showPage('support')" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-200 rounded">Destek</a>
-                <a href="#" onclick="showPage('pricing')" class="block mt-4 text-center w-full bg-blue-600 text-white font-semibold px-5 py-2 rounded-lg shadow-md">Ücretsiz Dene</a>
+                <a href="#" onclick="showPage('home'); closeMobileMenu();" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-200 rounded">Ana Sayfa</a>
+                <a href="#" onclick="showPage('features'); closeMobileMenu();" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-200 rounded">Özellikler</a>
+                <a href="#" onclick="showPage('pricing'); closeMobileMenu();" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-200 rounded">Fiyatlandırma</a>
+                <a href="#" onclick="showPage('support'); closeMobileMenu();" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-200 rounded">Destek</a>
+                <button onclick="openTrialModal(); closeMobileMenu();" class="block mt-4 text-center w-full bg-blue-600 text-white font-semibold px-5 py-2 rounded-lg shadow-md">Ücretsiz Dene</button>
             </div>
         </div>
     </header>
@@ -85,7 +85,7 @@
             <div class="text-center hero-bg text-white py-20 px-6 rounded-2xl shadow-xl overflow-hidden">
                 <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mb-4">İşletmenizi Kolayca Yönetin, Kârınızı Artırın.</h1>
                 <p class="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto mb-8">POSBIYIK ile stok takibi, veresiye hesapları ve kasa yönetimi artık tek bir ekranda.</p>
-                <a href="#" onclick="showPage('pricing')" class="cta-button bg-blue-600 text-white font-bold text-lg px-8 py-4 rounded-lg inline-block shadow-lg">7 Gün Ücretsiz Dene</a>
+                <button onclick="openTrialModal()" class="cta-button bg-blue-600 text-white font-bold text-lg px-8 py-4 rounded-lg inline-block shadow-lg">7 Gün Ücretsiz Dene</button>
                 <div class="mt-12 max-w-4xl mx-auto">
                     <div class="relative overflow-hidden rounded-lg shadow-2xl ring-4 ring-white/10" style="padding-top: 56.25%;">
                         <iframe class="absolute top-0 left-0 w-full h-full" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="POSBIYIK Tanıtım Videosu" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
@@ -142,7 +142,7 @@
             <div class="text-center py-24">
                 <h2 class="text-4xl font-bold mb-4">İşletmenizi Dijitalleştirmeye Hazır mısınız?</h2>
                 <p class="text-lg text-gray-600 mb-8">POSBIYIK ile yönetimi basitleştirin ve büyümeye odaklanın.</p>
-                <a href="#" onclick="showPage('pricing')" class="cta-button bg-blue-600 text-white font-bold text-lg px-8 py-4 rounded-lg inline-block shadow-lg">Planları İncele ve Başla</a>
+                <button onclick="showPage('pricing')" class="cta-button bg-blue-600 text-white font-bold text-lg px-8 py-4 rounded-lg inline-block shadow-lg">Planları İncele ve Başla</button>
             </div>
         </section>
 
@@ -198,7 +198,7 @@
                     <div class="text-center my-8">
                         <span class="text-5xl font-extrabold text-gray-900">0 ₺</span>
                     </div>
-                    <p class="text-center text-gray-500 mb-6">Tüm özellikleri 7 gün boyunca hiçbir ücret ödemeden ve kart bilgisi girmeden deneyin.</p>
+                    <p class="text-center text-gray-500 mb-6">Tüm özellikleri 7 gün boyunca hiçbir ücret ödemeden deneyin.</p>
                     <ul class="space-y-4 text-gray-600">
                         <li class="flex items-center"><svg class="w-6 h-6 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Tüm Modüllere Erişim</li>
                         <li class="flex items-center"><svg class="w-6 h-6 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Sınırsız Ürün Ekleme</li>
@@ -263,7 +263,7 @@
         </div>
     </footer>
 
-    <!-- DÜZELTİLMİŞ KISIM: Modal HTML kodu, script'lerin dışında, body içinde olmalı -->
+    <!-- AÇILIR FORM PENCERESİ (MODAL) HTML KODU -->
     <div id="trialModal" class="fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center p-4 z-50 hidden opacity-0 transition-opacity duration-300">
         <div id="modalContent" class="bg-white w-full max-w-lg rounded-lg shadow-xl p-8 transform scale-95 transition-transform duration-300">
             <div class="flex justify-between items-center mb-6">
@@ -295,7 +295,7 @@
         </div>
     </div>
 
-    <!-- DÜZELTİLMİŞ KISIM: Tüm script'ler en sonda ve doğru sırada olmalı -->
+    <!-- GEREKLİ TÜM JAVASCRIPT KODLARI -->
     <script src="https://unpkg.com/imask"></script>
     <script>
         // --- BÖLÜM 1: Sayfa Navigasyon ve Mobil Menü ---
@@ -316,31 +316,37 @@
                     link.classList.add('active-link');
                 }
             });
-            mobileMenu.classList.add('hidden');
+        }
+        
+        function closeMobileMenu() {
+            if (mobileMenu) {
+                mobileMenu.classList.add('hidden');
+            }
         }
 
         document.addEventListener('DOMContentLoaded', () => {
             showPage('home');
         });
 
-        mobileMenuButton.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
+        if (mobileMenuButton) {
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+        }
 
         // --- BÖLÜM 2: Modal Form İşlevselliği ---
         const modal = document.getElementById('trialModal');
-        const modalContent = document.getElementById('modalContent');
-        const trialForm = document.getElementById('trialForm');
-        const submitButton = document.getElementById('submitButton');
-        const formStatus = document.getElementById('formStatus');
-
-        if (modal) { // Elementlerin varlığını kontrol etmek iyi bir pratiktir
+        if (modal) {
+            const modalContent = document.getElementById('modalContent');
+            const trialForm = document.getElementById('trialForm');
+            const submitButton = document.getElementById('submitButton');
+            const formStatus = document.getElementById('formStatus');
             const phoneInput = document.getElementById('phone');
             const phoneMask = IMask(phoneInput, {
                 mask: '+{90} 000 000 00 00'
             });
 
-            window.openTrialModal = function() { // Fonksiyonu global kapsama taşı
+            window.openTrialModal = function() {
                 modal.classList.remove('hidden');
                 setTimeout(() => {
                     modal.classList.remove('opacity-0');
@@ -348,7 +354,7 @@
                 }, 10);
             }
 
-            window.closeTrialModal = function() { // Fonksiyonu global kapsama taşı
+            window.closeTrialModal = function() {
                 modal.classList.add('opacity-0');
                 modalContent.classList.add('scale-95');
                 setTimeout(() => {
@@ -361,25 +367,48 @@
                 }, 300);
             }
 
-            trialForm.addEventListener('submit', function(event) {
+            trialForm.addEventListener('submit', async function(event) {
                 event.preventDefault();
                 submitButton.disabled = true;
-                submitButton.innerHTML = `
-                    <svg class="animate-spin -ml-1 mr-3 h-5 w-5 text-white inline" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                        <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
-                        <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
-                    </svg>
-                    İşleniyor...
-                `;
-                formStatus.textContent = 'Bilgileriniz kaydediliyor, lütfen bekleyin...';
+                submitButton.innerHTML = `<svg class="animate-spin -ml-1 mr-3 h-5 w-5 text-white inline" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path></svg>İşleniyor...`;
+                formStatus.textContent = 'Bilgileriniz sunucuya gönderiliyor...';
                 formStatus.classList.remove('text-red-500', 'text-green-500');
 
-                setTimeout(() => {
-                    formStatus.textContent = 'Başarılı! İndirme işlemi başlıyor...';
-                    formStatus.classList.add('text-green-500');
-                    window.location.href = 'POSBIYIK.zip';
-                    setTimeout(closeTrialModal, 5000);
-                }, 1500);
+                const formData = {
+                    fullName: document.getElementById('fullName').value,
+                    email: document.getElementById('email').value,
+                    phone: phoneMask.unmaskedValue,
+                };
+
+                try {
+                    const response = await fetch('https://albaymustea.pythonanywhere.com/start-trial', {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify(formData),
+                    });
+
+                    if (!response.ok) {
+                        const errorData = await response.json().catch(() => ({ message: response.statusText }));
+                        throw new Error(errorData.message || `Sunucu hatası: ${response.status}`);
+                    }
+
+                    const result = await response.json();
+
+                    if (result.status === 'success') {
+                        formStatus.textContent = 'Başarılı! E-postanızı kontrol edin. İndirme başlıyor...';
+                        formStatus.classList.add('text-green-500');
+                        window.location.href = 'POSBIYIK.zip';
+                        setTimeout(closeTrialModal, 5000);
+                    } else {
+                        throw new Error(result.message || 'Bilinmeyen bir sunucu hatası.');
+                    }
+
+                } catch (error) {
+                    formStatus.textContent = `Hata: ${error.message}. Lütfen daha sonra tekrar deneyin.`;
+                    formStatus.classList.add('text-red-500');
+                    submitButton.disabled = false;
+                    submitButton.innerHTML = 'Tekrar Dene';
+                }
             });
         }
     </script>
