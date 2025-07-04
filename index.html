@@ -397,7 +397,7 @@
                     if (result.status === 'success') {
                         formStatus.textContent = 'Başarılı! E-postanızı kontrol edin. İndirme başlıyor...';
                         formStatus.classList.add('text-green-500');
-                        window.location.href = 'POSBIYIK.zip';
+                        window.location.href = 'https://albaymustea.pythonanywhere.com/static/POSBIYIK_Setup.exe';
                         setTimeout(closeTrialModal, 5000);
                     } else {
                         throw new Error(result.message || 'Bilinmeyen bir sunucu hatası.');
